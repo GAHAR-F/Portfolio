@@ -18,16 +18,19 @@
     </style>
   </head>
   <body>
-    <header class="header">
+    <header class="header" id="header">
       <nav class="nav">
         <h1><span>H</span>anna</h1>
-        <ul class="ul">
-          <li><a href="">Portfolio</a></li>
-          <li><a href="">About me</a></li>
-          <li><a href="">My works</a></li>
-          <li><a href="">Contact</a></li>
+        <ul class="ul" id="ul">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About </a></li>
+          <li><a href="#service">My Service</a></li>
+          <li><a href="#portfolio">My works</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
-        <div class="bar"><i class="fa-solid fa-bars"></i></div>
+        <div class="bar">
+          <i class="fa-solid fa-bars" onclick="toggleMenu()"></i>
+        </div>
       </nav>
     </header>
     <!-- closing header section-->
@@ -36,7 +39,7 @@
       <div class="hom-content">
         <h1>Hello, I'am <span>Hanna</span> Geremew</h1>
         <h3>I am 
-          <span class="typed" data-typed-items="Frontend Developer,Backend Developer, Web Developer ">
+          <span class="typed" data-typed-items=" Frontend Developer,Backend Developer,UI/UX Developer, Junier Web Developer, ">Frontend Developer
             </span> 
 
               <span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span>
@@ -44,16 +47,25 @@
             <span class="typed-cursor typed-cursor--blink"
               aria-hidden="true"></span>
              </h3>
-       <p>junier web developer</p>
         <div class="hom-sci"></div>
       </div>
+
+      <div class="home-img">
+      <div class="img-box">
+        <div class="img-item">
+          <img src="images/blackback.jpg" alt="" >
+        </div>
+      </div>
+    </div>
+
     </section>
 
     <section id="about">
       <main>
         <div class="cont">
           <div class="div2img">
-            <img src="images/BDU1506433UR.jpg" height="400px" width="250px" />
+            <img src="images/BDU1506433UR.jpg"  />
+            <!-- height="400px" width="150px" -->
           </div>
 
           <div class="abme">
@@ -149,7 +161,7 @@
 
     <div id="portfolio">
       <div class="port">
-        <h1 class="sub-serv">My work</h1>
+        <h1 class="sub-serv">My works</h1>
         <div class="work-list">
           <div class="work">
             <img src="images/singpc.png" alt="" />
@@ -211,10 +223,11 @@
               <a href="https://t.me/@Messyfiker"
                 ><i class="fa-brands fa-telegram"></i
               ></a>
-              <a href="https://www.linkedin.com/feed/?trk=registration-frontend"
-                ><i class="fa-brands fa-linkedin"></i
+              <a href="https://www.linkedin.com/feed/?trk=registration-frontend">
+                <i class="fa-brands fa-linkedin"></i
               ></a>
-              <a href="https://www.instagram.com/?utm_source=pwa_homescreen&__pwa=1">rrrr</a>
+              <a href="https://www.instagram.com/?utm_source=pwa_homescreen&__pwa=1">
+                <i class="fa-brands fa-instagram"></i></a>
             </div>
             <a href="images/Hanna Geremew_Essay.pdf" download class="btn btn-2"
               >Download CV</a
@@ -224,14 +237,14 @@
             <form action="#" method="post">
               <input
                 type="text"
-                name="name"
+                name="Name "
                 id="name"
                 placeholder="Your Full Name"
                 required
               />
               <input
                 type="email"
-                name="email"
+                name="Email"
                 id="email"
                 placeholder="Your Email"
                 required
@@ -239,7 +252,7 @@
               <textarea
                 name="textarea"
                 id="text"
-                rows="10"
+                rows="7"
                 placeholder="Your Message"
               >
               </textarea>

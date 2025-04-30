@@ -1,3 +1,15 @@
+//for navbar
+let ul = document.getElementById("ul");
+ul.style.maxHeight = "0px";
+
+function toggleMenu() {
+  if (ul.style.maxHeight == "0px") {
+    ul.style.maxHeight = "175px";
+  } else {
+    ul.style.maxHeight = "0px";
+  }
+}
+
 // for About
 var tablink = document.getElementsByClassName("tab-link");
 var tabtab = document.getElementsByClassName("tabtab");
