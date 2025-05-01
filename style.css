@@ -404,6 +404,9 @@ body{
 
     /* media quary */
         @media (max-width:600px) {
+            html{
+                scroll-behavior: smomoth;
+            }
             .nav ul{
                 position:absolute;
                 top: 65px;

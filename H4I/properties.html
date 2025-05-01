@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>H4I Real Estate - Properties</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: #333;
+        }
+        header {
+            background-color: #2c3e50;
+            color: #ecf0f1;
+            padding: 20px;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+        }
+        nav {
+            background-color: #34495e;
+            padding: 10px 0;
+        }
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+        nav ul li {
+            margin: 0 15px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #ecf0f1;
+            font-weight: bold;
+        }
+        nav ul li a:hover {
+            color: #f39c12;
+        }
+        .property-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        .property-card {
+            background-color: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        .property-card:hover {
+            transform: scale(1.05);
+        }
+        .property-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .property-card h3 {
+            margin: 10px;
+            font-size: 1.5rem;
+        }
+        .property-card p {
+            margin: 10px;
+            color: #666;
+        }
+        .property-card button {
+            margin: 10px;
+            padding: 10px 20px;
+            border: none;
+            background-color: #2c3e50;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .property-card button a {
+            color: white;
+            text-decoration: none;
+        }
+        .property-card button:hover {
+            background-color: #f39c12;
+        }
+        footer {
+            background-color: #2c3e50;
+            color: #ecf0f1;
+            text-align: center;
+            padding: 10px;
+        }
+    </style>
+    <script>
+        function navigateToDetails(propertyName) {
+            const propertyPages = {
+                "Luxury Villa": "luxury-villa.html",
+                "Modern Apartment": "modern-apartment.html",
+                "Cozy Cottage": "cozy-cottage.html",
+                "Beachfront Home": "beachfront-home.html",
+                "Urban Penthouse": "urban-penthouse.html",
+                "Mountain Retreat": "mountain-retreat.html"
+            };
+
+            const page = propertyPages[propertyName];
+            if (page) {
+                window.location.href = page;
+            } else {
+                alert("Details page for " + propertyName + " is not available.");
+            }
+        }
+    </script>
+</head>
+<body>
+
+<header>
+    <h1>Explore Our Properties</h1>
+</header>
+
+<nav>
+    <ul>
+        <li><a href="H4I.html">Home</a></li>
+        <li><a href="properties.html">Properties</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+</nav>
+
+<section class="property-grid">
+    <div class="property-card">
+        <img src="images/1image.jpg" alt="Luxury Villa">
+        <h3>Luxury Villa</h3>
+        <p>4 Beds | 3 Baths | $1,200,000 | Bole, Addis Abeba</p>
+        <button><a href="hou1.html">View Details</a></button>
+    </div>
+    <div class="property-card">
+        <img src="images/2image.jpg" alt="Modern Apartment">
+        <h3>Modern Apartment</h3>
+        <p>2 Beds | 2 Baths | $800,000 | Semit, Addis Abeba</p>
+        <button><a href="hou2.html">View Details</a></button>
+    </div>
+    <div class="property-card">
+        <img src="images/3images.jpg" alt="Cozy Cottage">
+        <h3>Cozy Cottage</h3>
+        <p>3 Beds | 2 Baths | $500,000 | Saris, Addis Abeba</p>
+        <button><a href="hou3.html">View Details</a></button>
+    </div>
+    <div class="property-card">
+        <img src="images/4images.jpg" alt="Beachfront Home">
+        <h3>Beachfront Home</h3>
+        <p>5 Beds | 4 Baths | $2,500,000 | Lideta, BahirDar</p>
+        <button><a href="hou4.html">View Details</a></button>
+    </div>
+    <div class="property-card">
+        <img src="images/5image.jpg" alt="Urban Penthouse">
+        <h3>Urban Penthouse</h3>
+        <p>2 Beds | 2 Baths | $800,000 | Bole Gebriel, D/Markos</p>
+        <button><a href="hou5.html">View Details</a></button>
+    </div>
+    <div class="property-card">
+        <img src="images/6images.jpg" alt="Mountain Retreat">
+        <h3>Mountain Retreat</h3>
+        <p>2 Beds | 2 Baths | $800,000 | Yeka Abadu, Addis Abeba</p>
+        <button><a href="hou6.html">View Details</a></button>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2025 H4I Real Estate. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>
