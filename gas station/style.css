@@ -1,0 +1,80 @@
+* {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Segoe UI", sans-serif;
+      }
+
+      body {
+        background-color: #f9f9f9;
+        color: #333;
+        line-height: 1.6;
+      }
+
+      header {
+        background-color: #005f73;
+        color: white;
+        padding: 1rem;
+        text-align: center;
+      }
+
+      nav ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        margin-top: 0.5rem;
+      }
+
+      nav ul li {
+        margin: 0 15px;
+      }
+
+      nav ul li a {
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+      }
+
+      section {
+        padding: 2rem;
+        max-width: 800px;
+        margin: auto;
+      }
+
+      section#home {
+        background-color: #e0fbfc;
+        text-align: center;
+      }
+
+      section#services ul {
+        list-style: none;
+        padding-left: 0;
+      }
+
+      section#services li {
+        margin-bottom: 10px;
+      }
+
+      footer {
+        text-align: center;
+        padding: 1rem;
+        background-color: #005f73;
+        color: white;
+        margin-top: 2rem;
+      }
+
+      .map-container {
+        margin-top: 1rem;
+        border: 2px solid #ccc;
+        border-radius: 8px;
+        overflow: hidden;
+      }
+      @media (max-width: 768px) {
+        nav ul {
+          display: none; 
+          flex-direction: column; 
+        }
+        nav ul.active {
+          display: block; 
+        }
+      }
