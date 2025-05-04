@@ -356,31 +356,7 @@
       </footer>
     </section>
     <script src="script.js"></script>
-    <script>
-        function toggleMenu() {
-            const ul = document.getElementById('ul');
-            ul.classList.toggle('active');
-            
-            // Change icon between bars and times
-            const barIcon = document.querySelector('.bar i');
-            if (ul.classList.contains('active')) {
-                barIcon.classList.remove('fa-bars');
-                barIcon.classList.add('fa-times');
-            } else {
-                barIcon.classList.remove('fa-times');
-                barIcon.classList.add('fa-bars');
-            }
-        }
+  
         
-        // Close menu when clicking on a link (for mobile)
-        const navLinks = document.querySelectorAll('.ul li a');
-        navLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                if (window.innerWidth <= 768) {
-                    toggleMenu();
-                }
-            });
-        });
-    </script>
   </body>
 </html>
