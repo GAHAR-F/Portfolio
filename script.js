@@ -1,5 +1,4 @@
 //for navbar
-
 function toggleMenu() {
   const ul = document.getElementById("ul");
   ul.classList.toggle("active");
@@ -25,7 +24,16 @@ navLinks.forEach((link) => {
   });
 });
 
+let ul = document.getElementById("ul");
+ul.style.maxHeight = "0px";
 
+function toggleMenu() {
+  if (ul.style.maxHeight == "0px") {
+    ul.style.maxHeight = "175px";
+  } else {
+    ul.style.maxHeight = "0px";
+  }
+}
 
 // for About
 var tablink = document.getElementsByClassName("tab-link");
