@@ -13,7 +13,72 @@
     <title>GAHAR</title>
     <link rel="stylesheet" href="style.css" />
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-    <style></style>
+    <style>
+      
+        
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .nav h1 {
+            font-size: 1.8rem;
+            /* color: #333; */
+        }
+        
+        .nav h1 span {
+            color: #ff6b6b;
+        }
+        
+        .ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+        
+        .ul li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        .ul li a:hover {
+            color: #ff6b6b;
+        }
+        
+        .bar {
+            
+           
+        }
+        
+        @media (max-width: 768px) {
+            .bar {
+                display: block;
+            }
+            
+            .ul {
+                position: fixed;
+                top: 70px;
+                left: -100%;
+                width: 100%;
+                height: calc(100vh - 70px);
+                flex-direction: column;
+                align-items: right;
+                gap: 15px;
+                transition: left 0.5s ease;
+                box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+            }
+            
+            .ul.active {
+                left: 0;
+            }
+        }
+    </style>
   </head>
 
   <body>
@@ -34,7 +99,7 @@
     </header>
     <!-- closing header section-->
 
-    <section class="home">
+    <section class="home" id="home">
       <div class="hom-content">
         <h1>Hello, I'am <span>Hanna</span> Geremew</h1>
         <h3>
@@ -291,5 +356,31 @@
       </footer>
     </section>
     <script src="script.js"></script>
+    <script>
+        function toggleMenu() {
+            const ul = document.getElementById('ul');
+            ul.classList.toggle('active');
+            
+            // Change icon between bars and times
+            const barIcon = document.querySelector('.bar i');
+            if (ul.classList.contains('active')) {
+                barIcon.classList.remove('fa-bars');
+                barIcon.classList.add('fa-times');
+            } else {
+                barIcon.classList.remove('fa-times');
+                barIcon.classList.add('fa-bars');
+            }
+        }
+        
+        // Close menu when clicking on a link (for mobile)
+        const navLinks = document.querySelectorAll('.ul li a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                if (window.innerWidth <= 768) {
+                    toggleMenu();
+                }
+            });
+        });
+    </script>
   </body>
 </html>
